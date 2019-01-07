@@ -36,10 +36,14 @@
     <Content Include="public\favicon.ico" />
     <Content Include="public\index.html" />
     <Content Include="package.json" />
+    <Content Include="src\components\user\login-form.vue">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\pages\index\app.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\pages\user\app.vue" />
+    <Content Include="src\pages\user\login\app.vue" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dist\" />
@@ -47,14 +51,17 @@
     <Folder Include="src\" />
     <Folder Include="src\assets\" />
     <Folder Include="src\components\" />
+    <Folder Include="src\components\user\" />
     <Folder Include="src\pages\" />
     <Folder Include="src\pages\index\" />
     <Folder Include="src\pages\user\" />
+    <Folder Include="src\pages\user\login\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="babel.config.js" />
     <Compile Include="src\pages\index\app.js" />
     <Compile Include="src\pages\user\app.js" />
+    <Compile Include="src\pages\user\login\app.js" />
     <Compile Include="title.js">
       <SubType>Code</SubType>
     </Compile>

@@ -1,23 +1,38 @@
 ﻿<template>
-  <div class="index">
-    <h1>INDEX.JS PAGE</h1>
-    <a href="/user.html"><h3>User Page</h3></a>
+  <div class="container page">
+    <div class="row">
+      <div class="col">
+        <h1>Index Page</h1>
+        <p>Security token: {{token}}</p>
+        <button class="btn btn-primary" @click="logoff">Logoff</button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
-
+    name: 'index',
+    data() {
+      return {
+        token: ''
+      }
+    },
+    mounted() {
+      if (localStorage.token) {
+        this.token = localStorage.token;
+      }
+    },
+    methods: {
+      logoff() {
+        localStorage.token = '';
+        this.token = '';
+      }
+    },
   }
 </script>
 
 <style scoped>
-  .index {
-    color: white;
-    font-size: large;
-    background-color: green;
-  }
-  .index a {
-    color: white;
+  .page {
   }
 </style>

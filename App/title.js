@@ -1,4 +1,4 @@
 ﻿module.exports = {
-  'index' : 'INDEX',
-  'user': 'USER'
+  'index' : 'Index',
+  'user': 'User'
 }
