@@ -13,16 +13,13 @@ namespace WebApi.Controllers
     public class UserController : ControllerBase
     {
         const string token = "1245ASDFA$%ASDFASGAS";
+
         //JSON in body
         //Content-Type: application/json
         [HttpPost]
         [Route("[action]")]
         public ActionResult<string> Login([FromBody] UserLogin userLogin)
         {
-            if (string.IsNullOrWhiteSpace(userLogin.Username)
-                || string.IsNullOrWhiteSpace(userLogin.Password))
-                return BadRequest();
-
             return token;
         }
 
@@ -31,10 +28,6 @@ namespace WebApi.Controllers
         [Route("[action]")]
         public ActionResult<string> Login2([FromQuery] UserLogin userLogin)
         {
-            if (string.IsNullOrWhiteSpace(userLogin.Username)
-                || string.IsNullOrWhiteSpace(userLogin.Password))
-                return BadRequest();
-
             return token;
         }
 
@@ -44,10 +37,6 @@ namespace WebApi.Controllers
         [Route("[action]")]
         public ActionResult<string> Login3([FromForm] UserLogin userLogin)
         {
-            if (string.IsNullOrWhiteSpace(userLogin.Username)
-                || string.IsNullOrWhiteSpace(userLogin.Password))
-                return BadRequest();
-
             return token;
         }
     }
