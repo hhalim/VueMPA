@@ -42,6 +42,9 @@
     <Content Include="src\pages\index\app.vue">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\pages\index\components\hello-world.vue">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\pages\user\app.vue" />
     <Content Include="src\pages\user\login\app.vue" />
   </ItemGroup>
@@ -54,6 +57,7 @@
     <Folder Include="src\components\user\" />
     <Folder Include="src\pages\" />
     <Folder Include="src\pages\index\" />
+    <Folder Include="src\pages\index\components\" />
     <Folder Include="src\pages\user\" />
     <Folder Include="src\pages\user\login\" />
   </ItemGroup>

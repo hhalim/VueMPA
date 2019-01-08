@@ -12,12 +12,43 @@ namespace WebApi.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        const string token = "1245ASDFA$%ASDFASGAS";
+        //JSON in body
+        //Content-Type: application/json
         [HttpPost]
         [Route("[action]")]
-        public string Login([FromBody] UserLogin userLogin)
+        public ActionResult<string> Login([FromBody] UserLogin userLogin)
         {
-            return "1245ASDFA$%ASDFASGAS";
+            if (string.IsNullOrWhiteSpace(userLogin.Username)
+                || string.IsNullOrWhiteSpace(userLogin.Password))
+                return BadRequest();
+
+            return token;
         }
 
+        //Use QueryString
+        [HttpPost]
+        [Route("[action]")]
+        public ActionResult<string> Login2([FromQuery] UserLogin userLogin)
+        {
+            if (string.IsNullOrWhiteSpace(userLogin.Username)
+                || string.IsNullOrWhiteSpace(userLogin.Password))
+                return BadRequest();
+
+            return token;
+        }
+
+        //Use FormFields in body
+        //Content-Type: application/x-www-form-urlencoded
+        [HttpPost]
+        [Route("[action]")]
+        public ActionResult<string> Login3([FromForm] UserLogin userLogin)
+        {
+            if (string.IsNullOrWhiteSpace(userLogin.Username)
+                || string.IsNullOrWhiteSpace(userLogin.Password))
+                return BadRequest();
+
+            return token;
+        }
     }
 }
