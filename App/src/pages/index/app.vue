@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col">
         <h1>Index Page</h1>
-        <hello-world></hello-world>
+        <HelloWorld></HelloWorld>
 
         <p>Security token: {{token}}</p>
         <button class="btn btn-primary" @click="logoff">Logoff</button>
@@ -13,10 +13,10 @@
 </template>
 
 <script>
-  import HelloWorld from './components/hello-world.vue';
+  import HelloWorld from './components/HelloWorld.vue';
 
   export default {
-    name: 'index',
+    name: 'Index',
     components: {
       HelloWorld
     },

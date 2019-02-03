@@ -2,17 +2,17 @@
   <div class="container page">
     <div class="row">
       <div class="col">
-        <login-form></login-form>
+        <LoginForm></LoginForm>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import LoginForm from '../../../components/user/login-form.vue';
+  import LoginForm from '../../../components/user/LoginForm.vue';
 
   export default {
-    name: 'app',
+    name: 'Login',
     components: {
       LoginForm
     },

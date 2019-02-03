@@ -74,12 +74,7 @@ namespace WebApi
             app.UseStaticFiles();
             app.UseStatusCodePages(); // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/error-handling?view=aspnetcore-2.1
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Demo}/{action=Index}");
-            });
+            app.UseMvc();
         }
     }
 }

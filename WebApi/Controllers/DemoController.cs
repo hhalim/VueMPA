@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
 {
+    [Route("[controller]/[action]")]
     public class DemoController : Controller
     {
         public IActionResult Index()

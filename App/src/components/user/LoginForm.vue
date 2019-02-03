@@ -17,7 +17,7 @@
   import serialize from 'form-serialize-json';
 
   export default {
-    name: 'login-form',
+    name: 'LoginForm',
     data() {
       return {
         username: '',

@@ -36,13 +36,13 @@
     <Content Include="public\favicon.ico" />
     <Content Include="public\index.html" />
     <Content Include="package.json" />
-    <Content Include="src\components\user\login-form.vue">
+    <Content Include="src\components\user\LoginForm.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\pages\index\app.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\pages\index\components\hello-world.vue">
+    <Content Include="src\pages\index\components\HelloWorld.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\pages\user\app.vue" />
