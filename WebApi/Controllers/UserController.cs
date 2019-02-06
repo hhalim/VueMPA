@@ -39,5 +39,13 @@ namespace WebApi.Controllers
         {
             return token;
         }
+
+        [HttpGet]
+        [Route("[action]")]
+        public ActionResult<string> UserNameAD()
+        {
+            return User.Identity.Name;
+        }
+
     }
 }
