@@ -4,7 +4,7 @@
       <div class="col">
         <h1>Index Page</h1>
         <hello-world></hello-world>
-
+        <p>{{username}}</p>
         <p>Security token: {{token}}</p>
         <button class="btn btn-primary" @click="logoff">Logoff</button>
       </div>
@@ -14,6 +14,7 @@
 
 <script>
   import HelloWorld from './components/hello-world.vue';
+  import axios from 'axios';
 
   export default {
     name: 'index',
@@ -22,13 +23,24 @@
     },
     data() {
       return {
-        token: ''
+        token: '',
+        apiRoot: process.env.VUE_APP_API_ROOT,
+        username: null
       }
     },
     mounted() {
       if (localStorage.token) {
         this.token = localStorage.token;
       }
+
+      axios.get(this.apiRoot + 'user/getUsername')
+        .then(response => {
+          this.username = response.data;
+        })
+        .catch((err) => {
+          this.$toasted.show('Error. ' + err.message, this.toastError);
+        });
+
     },
     methods: {
       logoff() {

@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="babel.config.js" />
+    <Compile Include="src\Mixin.js" />
     <Compile Include="src\pages\index\app.js" />
     <Compile Include="src\pages\user\app.js" />
     <Compile Include="src\pages\user\login\app.js" />
